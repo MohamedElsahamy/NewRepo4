@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+
+
+</head>
+
+<body>
+    <H1 class="text-center">Bookmarker</H1>
+    <H3 class="text-center"> Bookmark your favorite sites </H3>
+
+    <div class="container">
+        <div class="form-floating mb-3">
+            <input oninput="ValidateWebSite(this)" type="text" class=" form-control" id="BookmarkName"
+                placeholder="BookmarkName ">
+            <div class="alert alert-danger p-1 mt-2 d-none">
+                <small>Name Should Start With Capital Letter and Contain 6 Char at min</small>
+            </div>
+            <label for="BookmarkName">Bookmark Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input oninput="ValidateWebSite(this)" type="text" class=" form-control" id="WebSiteURL"
+                placeholder="WebSiteURL ">
+            <div class="alert alert-danger p-1 mt-2 d-none">
+                <small>WebSiteURL Should Contain '.com'</small>
+            </div>
+            <label for="BookmarkName">WebSite URL</label>
+        </div>
+
+
+        <button id="Addbtn" class="btn btn-danger" onclick=" AddNewWebsite()">Add</button>
+        <button id="Updatebtn" class="btn btn-info d-none" onclick=" UpdateValue()">Update</button>
+
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="Searchvalue" oninput="Search(this)" placeholder="Search...">
+            <label for="Search">Search</label>
+        </div>
+
+        <table class="w-100">
+            <thead>
+                <th>index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+
+            <tbody id="RowData">
+
+            </tbody>
+        </table>
+
+        <script src="main.js"></script>
+    </div>
+
+</body>
+
+</html>
